@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR /home/swucs/projects/dockerApp
+
+COPY package.json ./
+
+RUN npm install
+
+COPY ./ ./
+
+CMD ["npm", "run", "start"]
